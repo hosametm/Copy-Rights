@@ -12,10 +12,7 @@ class CopyRightServiceProvider extends ServiceProvider
 
     public function boot(Kernel $kernel): void
     {
-        $this->loadRoutesFrom([
-            __DIR__ . '/routes/api.php',
-            __DIR__ . '/routes/web.php',
-        ]);
+        // register the middleware for web and api routes
         $kernel->pushMiddleware(RightsMiddleware::class);
     }
 
