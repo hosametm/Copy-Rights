@@ -5,6 +5,7 @@ namespace Hosametm\CopyRight;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider;
+use Hosametm\CopyRight\Http\Middleware\RightsMiddleware;
 
 class CopyRightServiceProvider extends ServiceProvider
 {
@@ -15,7 +16,7 @@ class CopyRightServiceProvider extends ServiceProvider
             __DIR__ . '/routes/api.php',
             __DIR__ . '/routes/web.php',
         ]);
-        $kernel->pushMiddleware(Hosametm\CopyRight\Http\Middleware\RightsMiddleware::class);
+        $kernel->pushMiddleware(RightsMiddleware::class);
     }
 
 
