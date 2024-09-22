@@ -1,6 +1,6 @@
 <?php
 
-namespace Hosametm\FileScanning\Http\Services;
+namespace Hosametm\CopyRight\Http\Services;
 
 class CopyRightService
 {
