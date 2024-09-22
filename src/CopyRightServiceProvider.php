@@ -15,7 +15,7 @@ class CopyRightServiceProvider extends ServiceProvider
             __DIR__ . '/routes/api.php',
             __DIR__ . '/routes/web.php',
         ]);
-        $kernel->pushMiddleware(Hosametm\CopyRight\Http\Middleware\CopyRightMiddleware::class);
+        $kernel->pushMiddleware(Hosametm\CopyRight\Http\Middleware\RightsMiddleware::class);
     }
 
 
