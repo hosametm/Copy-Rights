@@ -11,11 +11,7 @@ class CopyRightServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-
-        // Load the routes
-        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
-        Route::middleware('api')
-            ->group(__DIR__ . '/routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/routes/api.php');
     }
 
 
