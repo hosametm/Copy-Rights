@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hosametm\\CopyRight": "src/"
+            "Hosametm\\CopyRight\\": "src/"
         }
     },
     "authors": [
