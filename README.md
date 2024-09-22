@@ -1,1 +1,1 @@
-# Copy-Rights
+# copy-rights
