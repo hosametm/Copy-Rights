@@ -1,9 +1,9 @@
 <?php
 
-namespace Hosametm\ProductCrud\Http\Controllers;
+namespace Hosametm\CopyRight\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Hosametm\ProductCrud\Http\Services\CopyRightService;
+use Hosametm\CopyRight\Http\Services\CopyRightService;
 
 class CopyRightController extends Controller
 {
