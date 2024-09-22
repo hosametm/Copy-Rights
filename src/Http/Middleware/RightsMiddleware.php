@@ -15,6 +15,7 @@ class RightsMiddleware
      */
     public function handle($request, Closure $next)
     {
+        dd($request->all());
         if ($request->has('violated')) {
             dd('You are violating the rights');
         }
