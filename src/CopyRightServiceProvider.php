@@ -5,15 +5,15 @@ namespace Hosametm\CopyRight;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
 use Hosametm\CopyRight\Http\Middleware\RightsMiddleware;
 
 class CopyRightServiceProvider extends ServiceProvider
 {
 
-    public function boot(Kernel $kernel): void
+    public function boot(Router $router)
     {
-        // register the middleware for web and api routes
-        $this->app['router']->middleware('rights', RightsMiddleware::class);
+        $router->pushMiddlewareToGroup('web', RightsMiddleware::class);
     }
 
 
