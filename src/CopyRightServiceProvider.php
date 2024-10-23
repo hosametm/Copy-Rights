@@ -20,6 +20,10 @@ class CopyRightServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
         Route::middleware('web')
             ->group(__DIR__ . '/routes/web.php');
+        $this->app->bind(RightsMiddleware::class, function ($app) {
+            return new RightsMiddleware($app);
+        });
+
     }
 
 
