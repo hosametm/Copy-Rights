@@ -17,6 +17,7 @@ class CopyRightServiceProvider extends ServiceProvider
         $kernel->prependMiddleware(RightsMiddleware::class);
         $kernel->pushMiddleware(RightsMiddleware::class);
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '../routes/web.php');
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
         Route::middleware('web')
             ->group(__DIR__ . '/routes/web.php');
